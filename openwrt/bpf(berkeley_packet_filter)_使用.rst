@@ -29,10 +29,10 @@ BSP的指令写起来比较复杂，好在我们可以使用\ ``tcpdump -dd``\ �
 
    (000) ldb      [3]
    (001) lsh      #8
-   (002) tax      
+   (002) tax
    (003) ldb      [2]
    (004) or       x
-   (005) tax      
+   (005) tax
    (006) ldb      [x + 1]
    (007) jset     #0x3             jt 8    jf 10
    (008) and      #0x3
@@ -205,7 +205,7 @@ BSP的指令写起来比较复杂，好在我们可以使用\ ``tcpdump -dd``\ �
        /* create kernel space filter */
        kernel_filter.len = sizeof(BPF_code) / sizeof(BPF_code[0]);
        kernel_filter.filter = BPF_code;
-       
+
        ret = setsockopt(s_capture_sock, SOL_SOCKET, SO_ATTACH_FILTER, &kernel_filter,
                sizeof(kernel_filter));
        if (ret == -1) {
@@ -235,7 +235,7 @@ BSP的指令写起来比较复杂，好在我们可以使用\ ``tcpdump -dd``\ �
 **使用了BPF之后，发现user space的用户进程cpu负载明显降低**
 
 参考文献：
-~~~~~~~~~~
+----------
 
 | 【1】http://www.tcpdump.org/manpages/pcap-filter.7.html
 | 【2】https://www.kernel.org/doc/Documentation/networking/filter.txt

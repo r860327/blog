@@ -3,11 +3,12 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to Chris's BLOG's documentation!
+OpenWRT
 ========================================
+OpenWRT相关的笔记
 
 .. toctree::
    :maxdepth: 2
-   :glob:
 
-   openwrt/index
+   Berkeley Packet Filter 使用 <bpf(berkeley_packet_filter)_使用>
+   OpenWRT使用3G USB Modem <openwork + 3g usb modem(中兴 MF667s)>
